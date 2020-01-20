@@ -25,8 +25,14 @@ Install pillow as needed.
 Define DATABASES connection under projects setting.py
 Add app name in INSTALLED_APPS under project setting.py
 python3 manage.py makemigrations (will create 0001_initial.py under migration folder)
-python3 manage.py sqlmigrate travelloapp 0001 ( will create sql statment)
-python3 manage.py migrate (Will create table structure in database)
+python3 manage.py sqlmigrate travelloapp 0001 ( will create sql statment) (run in case recreating the table)
+python3 manage.py migrate (Will create table structure in database) (run in case recreating the table)
+--Admin user
+python3 manage.py createsuperuser
+Username (leave blank to use 'XXXXXX'): yashxxxxx
+Email address: yashxxxxx@gmail.com
+Password:
+Password (again):
 
 ERROR:
  "INSTALLED_APPS." % (module, name)
