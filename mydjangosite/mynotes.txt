@@ -1,0 +1,86 @@
+Steps for Static data:
+------------------------
+Define Class in Models.py
+Instantiate the objects in views.py
+Make Static Changes for all images/css/js (Django format) in corresponding index.html
+Pass object attributes in index.html (use loop if needed)
+Make template, Staticfile changes in setting.py (local-assets where original files copied, adding reference to assets in django format)
+    STATICFILES_DIRS= [
+        os.path.join(BASE_DIR,'local-assets')
+    ]
+    STATIC_ROOT= os.path.join(BASE_DIR,'assets')
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR,'template')],
+
+
+Steps for using database connected apps: 
+---------------------------------------
+Define Class in Models.py according to Django format
+Install postgres and pgadmin
+Install python-database connector i.e. psycopg2 for postgres
+Install pillow as needed.
+Define DATABASES connection under projects setting.py
+Add app name in INSTALLED_APPS under project setting.py
+python3 manage.py makemigrations (will create 0001_initial.py under migration folder)
+python3 manage.py sqlmigrate travelloapp 0001 ( will create sql statment)
+python3 manage.py migrate (Will create table structure in database)
+
+ERROR:
+ "INSTALLED_APPS." % (module, name)
+RuntimeError: Model class travelloapp.models.destination doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS.
+FIX:
+Add below in app name in installed.
+INSTALLED_APPS = [
+    'travelloapp.apps.TravelloappConfig'
+    ....
+
+ERROR:
+ModuleNotFoundError: No module named 'travelloapp.apps.TravelloappConfigdjango'; 'travelloapp.apps' is not a package
+FIX:
+missing comma after app name
+INSTALLED_APPS = [
+    'travelloapp.apps.TravelloappConfig',
+
+
+ERROR:
+django.core.exceptions.ImproperlyConfigured: Error loading psycopg2 module: No module named 'psycopg2'
+
+FIX: psycopg2 driver (python to postgres database connected) is not installed 
+Install this using below command-
+pip3 install psycopg2
+
+ERROR:
+Error: pg_config executable not found.  
+FIX: 
+To make sure above config path available run command- which pg_config (in my case it returned nothing)
+install postgressql using below (even if installed already)
+brew install postgresql
+yashsrivasto@Yashs-MacBook-Pro ~ % which pg_config
+/usr/local/bin/pg_config
+ try to install psycopg2 again.
+ pip3 install psycopg2
+
+ERROR: (when you run above,found many similar errors)
+ ./psycopg/config.h:81:13: warning: unused function 'Dprintf' [-Wunused-function]
+     ld: library not found for -lssl
+    clang: error: linker command failed with exit code 1 (use -v to see invocation)
+    error: command 'gcc' failed with exit status 1
+FIX:
+check echo $LDFLAGS
+export LDFLAGS="-L/usr/local/opt/openssl/lib"
+try to install psycopg2 again.
+ pip3 install psycopg2
+This time installed successfully.
+
+
+ERRORS:
+travelloapp.destination.img: (fields.E210) Cannot use ImageField because Pillow is not installed.
+        HINT: Get Pillow at https://pypi.org/project/Pillow/ or run command "python -m pip install Pillow".
+FIX:
+Install Pillow as below-
+pip3 install pillow
+
+

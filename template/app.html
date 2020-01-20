@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<H1> "Hello Yash, Welcome to first Django Page"</H1>
+
+<form action="add" method="POST">
+
+    {% csrf_token %}
+    First Name :<input type="text" name="FirstName"><br>
+    Last Name :<input type="text" name="LastName"><br>
+    <input type="submit" value="Submit">
+
+</form>
+
+
+{% endblock %}
