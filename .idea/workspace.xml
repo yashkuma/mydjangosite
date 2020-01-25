@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ba918f56-1998-4fcf-b495-4ffeb72faeb3" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1WQRBzBGzfdhbTg8o4S9HgtnzmJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ba918f56-1998-4fcf-b495-4ffeb72faeb3" name="Default Changelist" comment="" />
+      <created>1579079700037</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579079700037</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="87" key="#Inspections" timestamp="1579132112272">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state x="320" y="87" key="#Inspections/0.23.1440.798@0.23.1440.798" timestamp="1579132112272" />
+    <state x="221" y="61" key="SettingsEditor" timestamp="1579131503007">
+      <screen x="0" y="23" width="1440" height="798" />
+    </state>
+    <state x="221" y="61" key="SettingsEditor/0.23.1440.798@0.23.1440.798" timestamp="1579131503007" />
+    <state x="397" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1579156825753">
+      <screen x="0" y="23" width="1440" height="804" />
+    </state>
+    <state x="397" y="261" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1579129023894" />
+    <state x="397" y="254" key="com.intellij.ide.util.TipDialog/0.23.1440.798@0.23.1440.798" timestamp="1579131732325" />
+    <state x="397" y="255" key="com.intellij.ide.util.TipDialog/0.23.1440.801@0.23.1440.801" timestamp="1579133238113" />
+    <state x="397" y="256" key="com.intellij.ide.util.TipDialog/0.23.1440.804@0.23.1440.804" timestamp="1579156825753" />
+  </component>
+</project>

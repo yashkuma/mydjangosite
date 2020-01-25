@@ -16,3 +16,4 @@ def add(request):
 
     res= var1+" "+ var2
     return render(request,"result.html", {"result": res} )
+

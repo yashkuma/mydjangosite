@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Registration</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <form action="register" method="POST">
+        {% csrf_token %}
+        <b>Registration Form </b> <br><br>
+        First Name : <input type="text" name="first_name" placeholder="First Name" ><br>
+        Last Name  : <input type="text" name="last_name" placeholder="Last Name" ><br>
+        UserName : <input type="text" name="username" placeholder="Username" ><br>
+        Email : <input type="email" name="email" placeholder="Email" ><br>
+        Password: <input type="password" name="passwd" placeholder="Password" ><br>
+        Confirm Password: <input type="password" name="c_passwd" placeholder="Confirm Password" ><br><br>
+
+        <input type="submit" value="Submit" > <br> <br>
+
+    </form>
+
+    <div>
+        {% for message in messages%}
+        <h3> 
+        {{message}} </h3> 
+        {% endfor %}
+    </div>
+
+</body>
+</html>
+
+
+{% endblock %}

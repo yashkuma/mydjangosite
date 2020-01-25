@@ -80,8 +80,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'travellodb',
         'USER': 'postgres',
-        'PASSWORD': '12345',
-        'HOST': 'localhost'
+        #'PASSWORD': '12345',
+        'HOST': 'localhost',
+        
+        'PASSWORD': '12345678'
     }
 }
 
