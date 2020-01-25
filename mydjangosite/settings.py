@@ -81,8 +81,8 @@ DATABASES = {
         'NAME': 'travellodb',
         'USER': 'postgres',
         #'PASSWORD': '12345',
-        'HOST': 'localhost',
-        
+        #'HOST': 'localhost'
+        'HOST': 'postgres-aws.cpwzfyiy8gqi.us-east-1.rds.amazonaws.com',
         'PASSWORD': '12345678'
     }
 }

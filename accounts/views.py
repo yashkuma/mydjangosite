@@ -5,7 +5,27 @@ from django.contrib.auth.models import User , auth
 # Create your views here.
 #from django.http import HttpResponse
 
-#simple registration page 
+#simple registration/login/logout method page
+ 
+def login(request):
+    if request.method== 'POST':
+        uname= request.POST['username']
+        passwd=request.POST['passwd']
+
+        user= auth.authenticate(username=uname,password=passwd)
+
+        if user is not None:
+            auth.login(request,user)
+            return redirect('/')
+        else:
+            messages.info(request,'Invalid Credentials ! Pl try again')
+            return redirect('login')
+
+    else:
+        return render(request,'login.html')
+
+
+
 def register(request):
 
     if request.method== 'POST':
@@ -29,8 +49,7 @@ def register(request):
             else:
                 user= User.objects.create_user(username=uname, email=email,first_name=fname,last_name=lname,password=passwd)
                 user.save()
-                messages.info(request,'Congratutions !! User is Registered successfully')
-                return redirect('/')
+                return redirect('login')
 
 
         else:
@@ -43,5 +62,8 @@ def register(request):
     else:
         return render(request,"register.html")
 
+def logout(request):
+    auth.logout(request)
+    return redirect ('/')
 
 
